@@ -1,0 +1,308 @@
+
+@font-face {
+    font-family: charter;
+    src: url('../css/fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter;
+    src: url('../css/fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: charter;
+    src: url('../css/fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: charter;
+    src: url('../css/fonts/charter-bold-italic.otf') ;
+    font-style: italic;
+    font-weight: bold;
+}
+:root {
+    font-size: 16px;
+    --white30: white;
+    --white20: #A5A3A5;
+    --white10: #3A3539;
+}
+/*html {
+    scroll-behavior: smooth;
+}*/
+body {
+    color: var(--white30);
+    font-family: 'Nunito Sans', sans-serif;
+    background: #251F24;
+    margin: 0;
+    /*writing-mode: vertical-lr;*/
+    /*margin-block: 100px;
+    margin-inline: 100px;*/
+}
+a {
+    color: var(--white30);
+}
+header{
+    margin-block-start: 20px;
+    font-size: 14px;
+    /*width: 188px;*/
+    color: var(--white);
+    /*border: 1px solid blue;*/
+    /*top: 64px;
+    left: -232px;
+    z-index: 1;*/
+    /*padding: 16px;*/
+}
+header a {
+    color: var(--white20);
+    text-decoration:nome;
+}
+header a:hover {
+    color: var(--white30);
+}
+nav details summary {
+    font-weight: bold;
+    line-height: 24px;
+}
+header li {
+    margin-block-end: 16px;
+    color: var(--white20);
+}
+
+/* hr + p {
+    margin-bottom: 64px 0;
+} */
+hr {
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
+    /*margin-bottom: 64px 0;*/
+}
+h1 {
+    font-size: 40px;
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+    /*margin-top: 64px;
+    margin-bottom: 16px;*/
+    font-weight: normal;
+}
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin-block: 40px;
+}
+h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-block: 16px;
+    /*font-weight: normal;*/
+}
+pre {
+    background: var(--white10);
+    padding: 40px;
+    font-family: 'Nunito';
+    line-height: 24px;
+    overflow: auto;
+    border-radius: 8px;
+    /*border: 10px solid red;
+    border-inline-start: 5px solid salmon;*/
+    border: 10px solid  #5551FF;
+    box-shadow: -10px 10px 0px 0px #ABAAF6;
+    margin-block-end: 30px;
+    border-start-start-radius: 60px;
+    ;
+}
+p {
+    color: var(--white20);
+}
+
+blockquote {
+/*border: 1px solid red;*/
+margin-block-start: 80px;
+margin-block-end: 63px;
+background-color: var(--white10);
+border-radius: 8px;
+padding: 24px;
+line-height: 32px;
+font-size: 24px;
+}
+blockquote p {
+    color: var(--white30);
+}
+blockquote span{
+    color:var(--white30);
+}
+blockquote span::before {
+    content: '-';
+}
+/*
+.header {
+    border: 1px solid black;
+    position: sticky;
+    top: 0;
+    inset-block-start: -45px;
+}
+*/
+.header-content {
+    padding-inline: 20px;
+}
+
+.main hr {
+    display: none;
+}
+/*
+.main {
+    border: 1px solid blue;
+}
+*/
+.wrapper {
+    max-inline-size: 902px;
+    /*inline-size: 500px;*/
+    /*width: 500px;*/
+    margin: auto;
+    
+}
+
+.main-content {
+    padding-inline: 16px;
+/*background: white;*/
+}
+
+.hero {
+    background:linear-gradient(96.07deg, #314755 30.63%, #26A0DA  102.18%);
+   /*background-image:linear-gradient(to top, rgba(255,255,255,.3), transparent), url('../images/pattern.png');
+    /*background-repeat: no-repeat;*/ 
+    /*background-position: left: 50px bottom -50px;*/
+    /*background-size: cover;*/
+    block-size: 50px;
+}
+.section-content img {
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+   
+}
+.section-content {
+    margin-top: 164px;
+}
+.section-content:first-of-type {
+    margin: 0;
+}
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content ul li {
+    margin-bottom: 16px;
+}
+.section-content + hr {
+    display: none;
+}
+.section-content img{
+    margin-top: 40px;
+}
+.section-content{
+    counter-reset: titleList;
+}
+.section-content h3 {
+    counter-increment: titleList;
+    padding-bottom: 8px;
+}
+
+.section-content h3::before {
+    content: counter(titleList, decimal) '. ';
+}
+/*
+.section-content h3::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--gray30);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
+    */
+    /*
+    .slider {
+       border: 5px solid red;
+    }
+    */
+    
+    .slider-container {
+        /*block-size: 100px;*/
+        display: block;
+        overflow: auto;
+        scroll-behavior: smooth;
+        scrollbar-face-color: black;
+        white-space: nowrap;
+        font-size: 0;
+        /*border: 1px solid violet;*/
+    }
+    .video {
+        margin: 0;
+        /*border: 1px solid blue;*/
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    .slider-bullet-list {
+        text-align: center;
+        margin-block-start: 10px;
+    }
+    .slider-bullet {
+        display: inline-block;
+        inline-size: 15px;
+        block-size: 15px;
+        background: white;
+        border-radius: 50%;
+    }
+    .form input { 
+        inline-size: 100%;
+        border: 1px solid var(--white30);
+        background: #251F24;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding-inline: 16px;
+        padding-block: 12px;
+        color: var(--white30);
+        font-size: 16px;
+        display: block;
+        margin-block-end: 24px;
+    }
+    .form input[type="submit"] {
+        background: #157EFB;
+        border: nome;
+    }
+    .form ::-webkit-input-placeholder {
+        color: var(--white20)
+    }
+    @media screen and (min-widht: 1366px) {
+        .hero {
+            block-size: 350px;
+        }
+        .header {
+            position: sticky;
+            inset-block-start: -45px;
+        }
+        .header-content {
+            position: relative;
+            inset-block-start: 65px;
+            padding-inline: 0;
+        }
+            header {
+                position: absolute;
+                inset-block-start: 0;
+                inset-inline-start: -208px;
+                inline-size: 188px;
+           }
+           h1 {
+            font-size: 60px;
+            margin-block-start: 64px;
+           }
+        }
+        
+    
